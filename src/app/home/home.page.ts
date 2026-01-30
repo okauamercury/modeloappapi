@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Vendas } from '../services/vendas';
+import { async, lastValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +10,23 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private api: Vendas) {
+    this.Listarpedidos();
+  }
+
+  async Listarpedidos() {
+    // listar pedidos
+    const pedidosLista = {
+      requisicao: 'pedido-listar'
+    }
+    console.log(pedidosLista);
+
+    const  resposta: any = await lastValueFrom(this.api.operacao(pedidosLista));
+    const pedidos =  resposta.data;
+
+    console.log(pedidos);
+  }
+
 
 }
+
