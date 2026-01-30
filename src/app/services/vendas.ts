@@ -5,8 +5,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class Vendas {
-  private url = 'https://10.91.47.129/modeloappapi';
-  constructor(private http: HttpClient) {}
+  private url = 'http://10.91.47.129/modelo-api';
+  constructor( private http: HttpClient) {}
 
   //saida para o primeiro enmdpoint
   operacao(dados:any){
