@@ -1,4 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Sistema Comercial
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button ></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content>
+
+  <ion-list>
+    <ion-item routerLink="/usuario-add">Cadastrar Usuário</ion-item>
+    <ion-item routerLink="/usuario-list">Listar Usuário</ion-item>
+    <ion-item routerLink="/cliente">Clientes</ion-item>
+    <ion-item routerLink="/produtos">Produtos</ion-item>
+    <ion-item routerLink="/pedidos">Pedidos</ion-item>
+  </ion-list>
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <ion-content>
   <ion-header [translucent]="true">
     <ion-toolbar>
       <ion-title>
@@ -24,4 +58,4 @@
       <p (click)="Listarpedidos()">Listar Pedidos</p>
     </div>
   </div>
-</ion-content>
+</ion-content> -->

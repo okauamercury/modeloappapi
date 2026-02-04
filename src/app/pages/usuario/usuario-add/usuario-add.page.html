@@ -21,10 +21,7 @@
     <ion-item>
       <ion-label position="floating">Nível</ion-label>
       <ion-select formControlName="id_nivel">
-        <ion-select-option value="1">Administrador</ion-select-option>
-        <ion-select-option value="2">Caixa</ion-select-option>
-        <ion-select-option value="3">Vendedor</ion-select-option>
-        <ion-select-option value="4">Estoquista</ion-select-option>
+        <ion-select-option *ngFor="let n of niveis" value="{{n.id}}">{{n.id + '- + n.nome'}}</ion-select-option>
       </ion-select>
       <ion-button expand="block" type="submit" [disabled]="form.invalid">Salvar Usuário</ion-button>
     </ion-item>
