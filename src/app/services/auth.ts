@@ -6,20 +6,28 @@ import { Vendas } from './vendas'; //
 })
 export class Auth {
   constructor(private api:Vendas){}
+   dados: any = null;
+
 
   login(email:string, senha:string){
     return this.api.operacao({
       requisicao : 'login',
       email,
       senha 
-    }).subscribe((res:any)=>{});
+    });
   }
 
-  logout(){}
+  logout(){
+    localStorage.setItem('usuario', JSON.stringify(this.dados));
+  }
 
-  setUsuario(){}
+  setUsuario(dados:any){
+    return JSON.parse( localStorage.getItem('usuario') || 'null');
+  }
 
-  getUsuario(){}
+  getUsuario():boolean {
+    return !!this.getUsuario();
+  }
 
   isLogado():boolean{
     return true;
