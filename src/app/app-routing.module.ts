@@ -47,6 +47,10 @@ const routes: Routes = [
     path: 'endereco',
     loadChildren: () => import('./pages/endereco/endereco.module').then( m => m.EnderecoPageModule)
   },
+  {
+    path: 'splash',
+    loadChildren: () => import('./splash/splash/splash.module').then( m => m.SplashPageModule)
+  },
 ];
 
 @NgModule({
