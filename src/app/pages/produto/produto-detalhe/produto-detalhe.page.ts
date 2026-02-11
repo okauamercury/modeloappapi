@@ -14,6 +14,7 @@ export class ProdutoDetalhePage implements OnInit {
   id!:number;
   form!:FormGroup;
   categorias:any[] = []
+  produto:any[] = []
 
   constructor(
    private route:ActivatedRoute,
@@ -26,12 +27,21 @@ export class ProdutoDetalhePage implements OnInit {
   ngOnInit() {
     this.id = Number(this.route.snapshot.paramMap.get('id'));
     this.listaCategorias();
+    this.buscaProduto(this.id);
   }
   listaCategorias(){
     this.api.operacao({requisicao: 'categorias-listar'})
     .subscribe((res:any)=>{
       if(res.success){
         this.categorias = res.data;
+      }
+    });
+  }
+  buscaProduto(is:number){
+       this.api.operacao({requisicao: 'produto-listar', id:this.id})
+    .subscribe((res:any)=>{
+      if(res.success){
+        this.produto = res.data;
       }
     });
   }
