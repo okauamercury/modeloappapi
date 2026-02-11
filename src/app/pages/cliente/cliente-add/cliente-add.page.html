@@ -32,68 +32,12 @@
           <ion-icon name="chevron-forward-circle"></ion-icon>
         </ion-fab-button>
         <ion-fab-list side="end">
-          <ion-fab-button>
-            <ion-icon name="home" routerLink="/cliente-add"></ion-icon>
-          </ion-fab-button>
+          <ion-button routerLink="/endereco">
+            <ion-icon name="home"></ion-icon>
+          </ion-button>
         </ion-fab-list>
       </ion-fab>
     </ion-content>
-
-    <ion-content>
-      <form>
-        <!-- <php function buscarCEP($cep) { $url='http://republicavirtual.com.br/web_cep.php?cep=' . urlencode($cep)
-          . '&formato=query_string' ; $resultado=@file_get_contents($url); if (!$resultado) { return [ 'resultado'=> 0,
-          'resultado_txt' => 'Erro ao buscar CEP'
-          ];
-          }
-
-          parse_str($resultado, $retorno);
-          return $retorno;
-          }
-
-
-          // Exemplo de uso
-          $cep = '90020022'; // coloque o CEP desejado
-          $resultado = buscarCEP($cep);
-
-          // Exibe o array retornado
-          echo "
-          <pre>Array Retornada:\n" . print_r($resultado, true) . "</pre>";
-
-          // Monta o texto dependendo do retorno
-          switch ($resultado['resultado']) {
-
-          case '2':
-          $texto = "
-          Cidade com logradouro único<br>
-          <b>Cidade:</b> {$resultado['cidade']}<br>
-          <b>UF:</b> {$resultado['uf']}<br>
-          ";
-          break;
-
-          case '1':
-          $texto = "
-          Cidade com logradouro completo<br>
-          <b>Tipo de Logradouro:</b> {$resultado['tipo_logradouro']}<br>
-          <b>Logradouro:</b> {$resultado['logradouro']}<br>
-          <b>Bairro:</b> {$resultado['bairro']}<br>
-          <b>Cidade:</b> {$resultado['cidade']}<br>
-          <b>UF:</b> {$resultado['uf']}<br>
-          ";
-          break;
-
-          default:
-          $texto = "Falha ao buscar CEP. Código de retorno: {$resultado['resultado']}";
-          break;
-          }
-
-          echo $texto;
-
-        ?> -->
-
-      </form>
-    </ion-content>
-
     <ion-button expand="block" type="submit" class="ion-margin" style="margin-top: 100px;">Salvar e
       continuar</ion-button>
   </form>

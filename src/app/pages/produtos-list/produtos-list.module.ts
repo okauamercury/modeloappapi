@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ProdutosPageRoutingModule } from './produtos-routing.module';
+import { ProdutosPageRoutingModule } from './produtos-list-routing.module';
 
-import { ProdutosPage } from './produtos.page';
+import { ProdutosPage } from './produtos-list.page';
 
 @NgModule({
   imports: [

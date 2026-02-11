@@ -22,7 +22,7 @@ const routes: Routes = [
   {
     path: 'produtos',
     canActivate:[AuthGuard],
-    loadChildren: () => import('./pages/produtos/produtos.module').then( m => m.ProdutosPageModule)
+    loadChildren: () => import('./pages/produtos-list/produtos-list.module').then( m => m.ProdutosPageModule)
   },
   {
     path: 'cliente-add',
