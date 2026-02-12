@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;"> Área do Cliente</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button><ion-icon name="arrow-back-sharp"></ion-icon></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let cliente of clientes" (click)="editar(cliente.id)">
+    <ion-label>
+      <h2> {{cliente.nome}} </h2>
+      <p>{{cliente.email}} | {{cliente.cpf}} | {{cliente.telefone}} | {{cliente.email}} | {{cliente.data_nasc}} | {{cliente.data_cad}} </p>
+    </ion-label>
+    <ion-badge color="success" *ngIf="cliente.ativo == 1"> Ativo </ion-badge>
+    <ion-badge color="medium" *ngIf="cliente.ativo == 0"> Inativo </ion-badge>
+  </ion-item>
+</ion-content>

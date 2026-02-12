@@ -1,13 +1,16 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title> Lista de Usuários</ion-title>
+    <ion-title style="text-align: center;">Lista de Usuários</ion-title>
   </ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button><ion-icon name="arrow-back-sharp"></ion-icon></ion-back-button>
+  </ion-buttons>
 </ion-header>
- 
+
 <ion-content class="ion-padding">
- 
+
   <!-- Lista de usuários -->
- 
+
   <ion-item *ngFor="let u of usuarios" (click)="editar(u.id)">
     <ion-label>
       <h2> {{u.nome}} </h2>
@@ -16,5 +19,5 @@
     <ion-badge color="success" *ngIf="u.ativo == 1"> Ativo </ion-badge>
     <ion-badge color="medium" *ngIf="u.ativo == 0"> Inativo </ion-badge>
   </ion-item>
- 
+
 </ion-content>
