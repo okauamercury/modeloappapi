@@ -6,3 +6,38 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
+<ion-content [fullscreen]="true">
+  <form [formGroup]="form">
+    <ion-item>
+      <ion-label position="floating">Descrição</ion-label>
+      <ion-input formControlName="descricao"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Codigo de Barras</ion-label>
+      <ion-input formControlName="cod_barras"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Valor Unitário</ion-label>
+      <ion-input formControlName="valor_unit"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Quantidade em Estoque</ion-label>
+      <ion-input formControlName="quantidade"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Estoque Minimo</ion-label>
+      <ion-input formControlName="estoque_minimo"></ion-input>
+    </ion-item>
+
+    
+    <ion-item>
+      <ion-label position="floating">Ultima Movimentação</ion-label>
+      <ion-input formControlName=""></ion-input>
+    </ion-item>
+  </form>
+</ion-content>

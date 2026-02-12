@@ -1,17 +1,18 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+// import { NgModule } from '@angular/core';
+// import { Routes, RouterModule } from '@angular/router';
 
-import { ClienteEditPage } from './cliente-edit.page';
+// import { ClienteEditPage } from './cliente-edit.page';
 
-const routes: Routes = [
-  {
-    path: '',
-    component: ClienteEditPage
-  }
-];
+// const routes: Routes = [
+//     {
+//         path: '',
+//         component: ClienteEditPage
+//     }
+// ];
 
-@NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
-})
-export class ClienteEditPageRoutingModule {}
+// @NgModule({
+//     imports: [RouterModule.forChild(routes)],
+//     exports: [RouterModule],
+
+// })
+// export class ClienteEditPageRoutingModule { }

@@ -62,10 +62,10 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     loadChildren: () => import('./pages/cliente/cliente-list/cliente-list.module').then(m => m.ClienteListPageModule)
   },
-  {
-    path: 'cliente-edit',
-    loadChildren: () => import('./pages/cliente/cliente-edit/cliente-edit.module').then( m => m.ClienteEditPageModule)
-  },
+  // {
+  //   path: 'cliente-edit',
+  //   loadChildren: () => import('./pages/cliente/cliente-edit/cliente-edit.module').then( m => m.ClienteEditPageModule)
+  // },
 
 ];
 
