@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class Vendas {
-  private url = 'http://sublimegrace.com.br/modeloappapi';
+  private url = 'http://sublimegrace.com.br/modelo-api';
   constructor( private http: HttpClient) {}
 
   //saida para o primeiro enmdpoint

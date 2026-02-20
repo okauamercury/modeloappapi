@@ -8,21 +8,23 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-list>
-    <ion-item *ngFor="let produto of produtos">
-      <ion-thumbnail *ngIf="produto.imagem" slot="start" (click)="abrir(produto.id)">
-        <img [src]="'https://sublimegrace.com.br/modelo-api/uploads/' + produto.imagem" />
-      </ion-thumbnail>
-      <ion-thumbnail *ngIf="!produto.imagem" slot="start" (click)="abrir(produto.id)">
-        <img [src]="'https://sublimegrace.com.br/modelo-api/uploads/sem_imagem.jpg'" />
-      </ion-thumbnail>
-      
-      <ion-label (click)="abrir(produto.id)">
-        <h2> {{produto.descricao}} </h2>
-        <p>Categoria: <strong> {{produto.categoria}} </strong> | R$ <strong> {{produto.valor_unit}} </strong>
-          | Estoque: <strong> {{produto.quantidade}} </strong>
-        </p>
-      </ion-label>
-    </ion-item>
-  </ion-list>
+  <div id="container" *ngIf="produtos">
+    <ion-list>
+      <ion-item *ngFor="let produto of produtos">
+        <ion-thumbnail *ngIf="produto.imagem" slot="start" (click)="abrir(produto.id)">
+          <img [src]="'https://sublimegrace.com.br/modelo-api/'+ produto.imagem" />
+        </ion-thumbnail>
+        <ion-thumbnail *ngIf="!produto.imagem" slot="start" (click)="abrir(produto.id)">
+          <img [src]="'https://sublimegrace.com.br/modelo-api/uploads/sem_imagem.jpg'" />
+        </ion-thumbnail>
+
+        <ion-label (click)="abrir(produto.id)">
+          <h2> {{produto.descricao}} </h2>
+          <p>Categoria: <strong> {{produto.categoria}} </strong> | R$ <strong> {{produto.valor_unit}} </strong>
+            | Estoque: <strong> {{produto.quantidade}} </strong>
+          </p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>
