@@ -9,15 +9,15 @@ import { Vendas } from 'src/app/services/vendas';
   styleUrls: ['./produto-list.page.scss'],
   standalone: false
 })
-export class ProdutoListPage   implements OnInit {
-  produtos:any[] = [];
+export class ProdutoListPage implements OnInit {
+  produtos: any[] = [];
 
-  constructor(private api: Vendas, private router:Router) { }
+  constructor(private api: Vendas, private router: Router) { }
 
   ngOnInit() {
     this.listar();
   }
-  listar(){
+ listar(){
     this.api.operacao({requisicao:'produto-listar'})
     .subscribe((retornoDaApi:any)=>{
       if(retornoDaApi.success){
@@ -26,7 +26,10 @@ export class ProdutoListPage   implements OnInit {
     });
   }
 
-  abrir(id:number){
+  abrirDetalhes(id: number) {
     this.router.navigate(['/produto-detalhe', id]);
+  }
+  abrir(id: number) {
+    this.router.navigate(['/produto-imagem', id]);
   }
 }

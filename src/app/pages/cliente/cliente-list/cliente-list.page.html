@@ -11,9 +11,44 @@
   <ion-item *ngFor="let cliente of clientes" (click)="editar(cliente.id)">
     <ion-label>
       <h2> {{cliente.nome}} </h2>
-      <p>{{cliente.email}} | {{cliente.cpf}} | {{cliente.telefone}} | {{cliente.email}} | {{cliente.data_nasc}} | {{cliente.data_cad}} </p>
+      <p>{{cliente.email}} | {{cliente.cpf}} | {{cliente.telefone}} | {{cliente.email}} | {{cliente.data_nasc}} |
+        {{cliente.data_cad}} </p>
     </ion-label>
     <ion-badge color="success" *ngIf="cliente.ativo == 1"> Ativo </ion-badge>
     <ion-badge color="medium" *ngIf="cliente.ativo == 0"> Inativo </ion-badge>
   </ion-item>
+  <ion-tabs #tabs>
+    <ion-tab tab="home">
+      <div id="home-page" class="ion-page">
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>home</ion-title>
+          </ion-toolbar>
+        </ion-header>
+      </div>
+    </ion-tab>
+    <ion-tab tab="search">
+      <div id="search-page" class="ion-page">
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>Search</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content>
+          <div class="example-content">Search content</div>
+        </ion-content>
+      </div>
+    </ion-tab>
+
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="home">
+        <ion-icon name="home"></ion-icon>
+        Home
+      </ion-tab-button>
+      <ion-tab-button tab="search">
+        <ion-icon name="search"></ion-icon>
+        Search
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
 </ion-content>
