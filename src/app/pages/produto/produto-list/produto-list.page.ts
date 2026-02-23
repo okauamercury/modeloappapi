@@ -67,4 +67,8 @@ export class ProdutoListPage implements OnInit {
   abrir(id: number) {
     this.router.navigate(['/produto-imagem', id]);
   }
+  buscar(event: any) {
+    this.palavra = event.target.value;
+    this.listar(null, true);
+  }
 }

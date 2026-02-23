@@ -9,6 +9,7 @@ import { Vendas } from 'src/app/services/vendas';
   standalone: false
 })
 export class ClienteListPage implements OnInit {
+  [x: string]: any;
 
   clientes: any[] = [];
   constructor(private api: Vendas, private router: Router) { }
@@ -33,5 +34,14 @@ export class ClienteListPage implements OnInit {
   }
   editar(id: number) {
     this.router.navigate(['/cliente-edit', id])
+  }
+  excluir(id: number) {
+    this.api.operacao({ requisicao: 'cliente-excluir', id }).subscribe(
+      (res: any) => {
+        if (res.success) {
+          this.listar();
+        }
+      }
+    )
   }
 }

@@ -4,6 +4,9 @@
     <ion-buttons slot="start">
       <ion-back-button><ion-icon name="arrow-back-sharp"></ion-icon></ion-back-button>
     </ion-buttons>
+
+    <!-- search bar -- caixa de busca -->
+     <ion-searchbar (ionInput)="buscar($event)" placeholder="Buscar Produtos" [debounce]="500"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 

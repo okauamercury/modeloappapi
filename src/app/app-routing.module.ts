@@ -66,6 +66,10 @@ const routes: Routes = [
     path: 'produto-imagem/:id',
     loadChildren: () => import('./pages/produto/produto-imagem/produto-imagem.module').then( m => m.ProdutoImagemPageModule)
   },
+  {
+    path: 'pedido-add',
+    loadChildren: () => import('./pages/pedido/pedido-add/pedido-add.module').then( m => m.PedidoAddPageModule)
+  },
   // {
   //   path: 'cliente-edit',
   //   loadChildren: () => import('./pages/cliente/cliente-edit/cliente-edit.module').then( m => m.ClienteEditPageModule)

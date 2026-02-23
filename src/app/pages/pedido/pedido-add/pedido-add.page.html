@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title style="text-align: center;">Novo Pedido</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form>
+        <ion-item>
+            <ion-label position="floating">Data do Pedido</ion-label>
+            <ion-input type="date" formControlName="dataPedido"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Valor Total</ion-label>
+            <ion-input type="number" formControlName="valorTotal"></ion-input>
+        </ion-item>
+
+        <ion-button expand="block" type="submit" class="ion-margin" style="margin-top: 100px;">Salvar</ion-button>
+    </form>
+</ion-content>
