@@ -1,20 +1,44 @@
-<ion-header>
+<!-- <ion-header>
     <ion-toolbar>
         <ion-title style="text-align: center;">Novo Pedido</ion-title>
     </ion-toolbar>
 </ion-header>
 
-<ion-content>
-    <form>
-        <ion-item>
-            <ion-label position="floating">Data do Pedido</ion-label>
-            <ion-input type="date" formControlName="dataPedido"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label position="floating">Valor Total</ion-label>
-            <ion-input type="number" formControlName="valorTotal"></ion-input>
-        </ion-item>
 
-        <ion-button expand="block" type="submit" class="ion-margin" style="margin-top: 100px;">Salvar</ion-button>
-    </form>
-</ion-content>
+<ion-content [fullscreen]="true">
+
+
+    <div id="container">
+
+        <h2>Resumo do Pedido</h2>
+        <ion-list>
+            <ion-item *ngFor="let item of carrinho">
+                <ion-label>
+                    <h3>Produto ID: {{ item.produto_id }}</h3>
+                    <p>Qtd: {{ item.quantidade }}</p>
+                </ion-label>
+                <ion-note slot="end">R$ --</ion-note>
+            </ion-item>
+        </ion-list>
+        <ion-button expand="block" color="success" (click)="finalizarCompra()" [disabled]="carrinho.length === 0">
+            <ion-icon name="checkmark-circle-outline" slot="start"></ion-icon>
+            Finalizar Venda
+        </ion-button>
+        <ion-card *ngIf="pedido">
+            <ion-card-header>
+                <ion-card-title>Pedido #{{pedido.id}}</ion-card-title>
+                <ion-card-subtitle>Dados</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content>
+                <p><strong>Usuario:</strong>{{pedido.usuario_id}}</p>
+                <p><strong>Cliente:</strong>{{pedido.cliente_id}}</p>
+                <p><strong>Data:</strong>{{pedido.data}}</p>
+                <p><strong>Status:</strong>{{pedido.status}}</p>
+                <p><strong>Desconto:</strong>{{pedido.desconto}}</p>
+            </ion-card-content>
+        </ion-card>
+        <div>
+            <p (click)="Listar()">Listar Pedidos</p>
+        </div>
+    </div>
+</ion-content> -->
