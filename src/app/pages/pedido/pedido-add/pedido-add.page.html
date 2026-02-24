@@ -1,44 +1,54 @@
-<!-- <ion-header>
-    <ion-toolbar>
-        <ion-title style="text-align: center;">Novo Pedido</ion-title>
-    </ion-toolbar>
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;"> Gestão de Pedidos</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button><ion-icon name="arrow-back-sharp"></ion-icon></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
+<ion-content>
+  <ion-app>
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Fazer Pedido</ion-title>
+      </ion-toolbar>
+    </ion-header>
 
-<ion-content [fullscreen]="true">
+    <ion-content class="ion-padding">
 
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Dados do Pedido</ion-card-title>
+        </ion-card-header>
 
-    <div id="container">
+        <ion-card-content>
 
-        <h2>Resumo do Pedido</h2>
-        <ion-list>
-            <ion-item *ngFor="let item of carrinho">
-                <ion-label>
-                    <h3>Produto ID: {{ item.produto_id }}</h3>
-                    <p>Qtd: {{ item.quantidade }}</p>
-                </ion-label>
-                <ion-note slot="end">R$ --</ion-note>
-            </ion-item>
-        </ion-list>
-        <ion-button expand="block" color="success" (click)="finalizarCompra()" [disabled]="carrinho.length === 0">
-            <ion-icon name="checkmark-circle-outline" slot="start"></ion-icon>
-            Finalizar Venda
-        </ion-button>
-        <ion-card *ngIf="pedido">
-            <ion-card-header>
-                <ion-card-title>Pedido #{{pedido.id}}</ion-card-title>
-                <ion-card-subtitle>Dados</ion-card-subtitle>
-            </ion-card-header>
-            <ion-card-content>
-                <p><strong>Usuario:</strong>{{pedido.usuario_id}}</p>
-                <p><strong>Cliente:</strong>{{pedido.cliente_id}}</p>
-                <p><strong>Data:</strong>{{pedido.data}}</p>
-                <p><strong>Status:</strong>{{pedido.status}}</p>
-                <p><strong>Desconto:</strong>{{pedido.desconto}}</p>
-            </ion-card-content>
-        </ion-card>
-        <div>
-            <p (click)="Listar()">Listar Pedidos</p>
-        </div>
-    </div>
-</ion-content> -->
+          <ion-item>
+            <ion-label position="floating">Nome do Cliente</ion-label>
+            <ion-input id="cliente"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Produto</ion-label>
+            <ion-input id="produto"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Quantidade</ion-label>
+            <ion-input id="quantidade" type="number"></ion-input>
+          </ion-item>
+          <ion-button (click)="excluirPedido()">
+            Excluir Pedido
+          </ion-button>
+
+          <ion-button (click)="salvarPedido()">
+            Salvar Pedido
+          </ion-button>
+
+        </ion-card-content>
+      </ion-card>
+
+    </ion-content>
+  </ion-app>
+</ion-content>

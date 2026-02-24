@@ -67,7 +67,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/produto/produto-imagem/produto-imagem.module').then( m => m.ProdutoImagemPageModule)
   },
   {
-    path: 'pedido-add',
+    path: 'pedido-list',
     loadChildren: () => import('./pages/pedido/pedido-add/pedido-add.module').then( m => m.PedidoAddPageModule)
   },
   // {
