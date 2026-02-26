@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title>Dashboard de Usuários</ion-title>
+    <ion-title>Dashboard</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,26 +12,33 @@
 
   <div *ngIf="loading" class="ion-text-center ion-padding">
     <ion-spinner name="crescent"></ion-spinner>
-    <p>Carregando usuários...</p>
+    <p> &nbsp;Carregando usuários...</p>
   </div>
 
   <ion-grid *ngIf="!loading">
     <ion-row>
-      <ion-col size="12" size-md="6" size-lg="4" *ngFor="let user of users">
+      <ion-col size="12" size-md="6" size-lg="4" *ngFor="let users of users">
         <ion-card>
           <ion-card-header>
-            <ion-card-title>{{ user.name }}</ion-card-title>
-            <ion-card-subtitle>{{ user.company.name }}</ion-card-subtitle>
+            <ion-card-title>{{ users.name }}</ion-card-title>
+            <ion-card-subtitle>{{ users.company.name }}</ion-card-subtitle>
           </ion-card-header>
 
           <ion-card-content>
-            <p><strong>Email:</strong> {{ user.email }}</p>
-            <p><strong>Telefone:</strong> {{ user.phone }}</p>
-            <p><strong>Cidade:</strong> {{ user.address.city }}</p>
+            <p><strong>Email:</strong> {{ users.email }}</p>
+            <p><strong>Telefone:</strong> {{ users.phone }}</p>
+            <p><strong>Cidade:</strong> {{ users.address.city }}</p>
           </ion-card-content>
         </ion-card>
       </ion-col>
     </ion-row>
   </ion-grid>
-
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Usuários por Status</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #pieCanvas></canvas>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

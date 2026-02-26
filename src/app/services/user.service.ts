@@ -5,12 +5,17 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class UserService {
-
-  private apiUrl = 'https://jsonplaceholder.typicode.com/users';
-
-  constructor(private http: HttpClient) {}
-
-  getUsers() {
-    return this.http.get<any[]>(this.apiUrl);
+  operacao: any;
+  getUsers(p0: { requisicao: string; }) {
+    throw new Error('Method not implemented.');
   }
+
+  // private apiUrl = 'https://jsonplaceholder.typicode.com/users';
+
+  // constructor(private http: HttpClient) {}
+
+  // getUsers() {
+  //   return this.http.get<any[]>(this.apiUrl);
+  // }
+  
 }

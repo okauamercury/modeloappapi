@@ -5,7 +5,11 @@ import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 
 import { DashboardionicPage } from './dashboardionic.page';
+import { HttpClientModule } from '@angular/common/http';
 
+imports: [
+  HttpClientModule
+]
 @NgModule({
   imports: [
     CommonModule,
@@ -20,4 +24,4 @@ import { DashboardionicPage } from './dashboardionic.page';
   ],
   declarations: [DashboardionicPage]
 })
-export class DashboardionicPageModule {}
+export class DashboardionicPageModule { }
