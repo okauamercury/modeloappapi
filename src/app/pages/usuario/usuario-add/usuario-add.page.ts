@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Form, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ToastController } from '@ionic/angular';
-import { Vendas } from 'src/app/services/vendas';
+import { Vendas } from 'src/app/services/vendas.service';
 
 @Component({
   selector: 'app-usuario-add',

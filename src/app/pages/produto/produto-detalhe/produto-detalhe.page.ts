@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
-import { Vendas } from 'src/app/services/vendas';
+import { Vendas } from 'src/app/services/vendas.service';
 
 @Component({
   selector: 'app-produto-detalhe',

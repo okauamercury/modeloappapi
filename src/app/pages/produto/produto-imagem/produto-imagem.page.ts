@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 import { Geolocation } from '@capacitor/geolocation';
-import { Vendas } from 'src/app/services/vendas';
+import { Vendas } from 'src/app/services/vendas.service';
 
 @Component({
   selector: 'app-produto-imagem',

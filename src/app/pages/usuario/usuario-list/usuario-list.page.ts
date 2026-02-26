@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Vendas } from 'src/app/services/vendas';
+import { Vendas } from 'src/app/services/vendas.service';
 
 @Component({
   selector: 'app-usuario-list',

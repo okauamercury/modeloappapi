@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Vendas } from '../services/vendas';
+import { Vendas } from '../services/vendas.service';
 import { async, lastValueFrom } from 'rxjs';
 import { ToastController } from '@ionic/angular';
 import { Router } from '@angular/router';
@@ -42,7 +42,6 @@ export class HomePage {
   //   this.mensagem = resposta.msg;
   //   this.pedido =  resposta.data[0];
   // }
-
 
 }
 

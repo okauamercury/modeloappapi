@@ -70,6 +70,10 @@ const routes: Routes = [
     path: 'pedido-list',
     loadChildren: () => import('./pages/pedido/pedido-add/pedido-add.module').then( m => m.PedidoAddPageModule)
   },
+  {
+    path: 'dashboardionic',
+    loadChildren: () => import('./pages/dashboardionic/dashboardionic.module').then( m => m.DashboardionicPageModule)
+  },
   // {
   //   path: 'cliente-edit',
   //   loadChildren: () => import('./pages/cliente/cliente-edit/cliente-edit.module').then( m => m.ClienteEditPageModule)
